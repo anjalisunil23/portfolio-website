@@ -10,6 +10,8 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
+const resumeHref = "/resume.pdf";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,6 +47,15 @@ const Navbar = () => {
               Let's Talk
             </a>
           </li>
+          <li>
+            <a
+              href={resumeHref}
+              download
+              className="text-sm font-medium px-4 py-2 rounded-lg border border-border text-foreground hover:border-primary/50 hover:text-primary transition-colors"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -77,6 +88,16 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={resumeHref}
+                  download
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg font-medium text-primary hover:opacity-80 transition-opacity"
+                >
+                  Download Resume
+                </a>
+              </li>
             </ul>
           </motion.div>
         )}

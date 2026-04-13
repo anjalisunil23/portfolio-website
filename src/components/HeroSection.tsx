@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
 
+const resumeHref = "/resume.pdf";
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -62,6 +64,13 @@ const HeroSection = () => {
                 className="px-6 py-3 rounded-lg border border-border text-foreground font-heading font-semibold hover:border-primary/50 hover:text-primary transition-colors"
               >
                 Get In Touch
+              </a>
+              <a
+                href={resumeHref}
+                download
+                className="px-6 py-3 rounded-lg border border-primary/30 bg-primary/10 text-primary font-heading font-semibold hover:bg-primary/15 transition-colors"
+              >
+                Download Resume
               </a>
             </motion.div>
 

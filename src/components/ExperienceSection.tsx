@@ -4,12 +4,12 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    company: "We Promote Business Solution",
-    role: "Project Lead",
-    period: "2024 – 2025",
+    company: "St. Antony's U.P. School, Mundakayam",
+    role: "IT Teacher",
+    period: "2022",
     description:
-      "Led project teams and managed end-to-end delivery of client web applications. Coordinated between design, development, and QA to ensure timely releases and quality standards.",
-    highlights: ["Team Leadership", "Project Management", "Client Communication", "Code Reviews"],
+      "Supported classroom learning and student development through lesson delivery, guidance, and day-to-day academic support in a school environment.",
+    highlights: ["Teaching", "Classroom Support", "Student Guidance", "Academic Coordination"],
   },
   {
     company: "VK Semantics",
@@ -19,7 +19,17 @@ const experiences = [
       "Developed and maintained full stack web applications using modern frameworks. Collaborated with cross-functional teams to deliver scalable and performant solutions.",
     highlights: ["React", "Node.js", "REST APIs", "Database Design"],
   },
+  {
+    company: "We Promote Business Solution",
+    role: "Project Lead",
+    period: "2024 – 2025",
+    description:
+      "Led project teams and managed end-to-end delivery of client web applications. Coordinated between design, development, and QA to ensure timely releases and quality standards.",
+    highlights: ["Team Leadership", "Project Management", "Client Communication", "Code Reviews"],
+  },
 ];
+
+const displayedExperiences = [...experiences].reverse();
 
 const ExperienceSection = () => {
   const ref = useRef(null);
@@ -47,7 +57,7 @@ const ExperienceSection = () => {
           <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-border" />
 
           <div className="space-y-12">
-            {experiences.map((exp, i) => (
+            {displayedExperiences.map((exp, i) => (
               <motion.div
                 key={exp.company}
                 initial={{ opacity: 0, x: -30 }}
