@@ -123,3 +123,9 @@ public/         Static assets such as favicon and resume
 This project can be deployed to any static hosting platform that supports Vite apps, such as Vercel, Netlify, or GitHub Pages.
 
 Before deploying, make sure your environment variables are configured in the hosting provider and that `public/resume.pdf` exists if you want the download button to work.
+
+
+## Live Demo
+
+Live site: [anjalisunil-portfolio-website.vercel.app](https://anjalisunil-portfolio-website.vercel.app)
+
