@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -9,7 +9,6 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder - could integrate with email service
     alert("Thanks for reaching out! I'll get back to you soon.");
     setFormData({ name: "", email: "", message: "" });
   };
@@ -30,7 +29,6 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -42,22 +40,27 @@ const ContactSection = () => {
               opportunities to be part of your vision.
             </p>
             <div className="space-y-4">
-              <div className="flex items-center gap-4">
+              <a href="mailto:anjalisunil200@gmail.com" className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Mail className="text-primary" size={18} />
                 </div>
-                <span className="text-foreground">anjali.sunil@email.com</span>
-              </div>
+                <span className="text-foreground group-hover:text-primary transition-colors">anjalisunil200@gmail.com</span>
+              </a>
+              <a href="tel:+916235743500" className="flex items-center gap-4 group">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Phone className="text-primary" size={18} />
+                </div>
+                <span className="text-foreground group-hover:text-primary transition-colors">+91 6235743500</span>
+              </a>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <MapPin className="text-primary" size={18} />
                 </div>
-                <span className="text-foreground">India</span>
+                <span className="text-foreground">Kerala, India</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 30 }}

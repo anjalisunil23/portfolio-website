@@ -9,13 +9,15 @@ const Footer = () => (
       </p>
       <div className="flex items-center gap-4">
         {[
-          { icon: Github, href: "#", label: "GitHub" },
-          { icon: Linkedin, href: "#", label: "LinkedIn" },
-          { icon: Mail, href: "#contact", label: "Email" },
+          { icon: Github, href: "https://github.com/anjalisunil23", label: "GitHub" },
+          { icon: Linkedin, href: "https://www.linkedin.com/in/anjali-sunil-a189a0218", label: "LinkedIn" },
+          { icon: Mail, href: "mailto:anjalisunil200@gmail.com", label: "Email" },
         ].map(({ icon: Icon, href, label }) => (
           <a
             key={label}
             href={href}
+            target={href.startsWith("http") ? "_blank" : undefined}
+            rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
             aria-label={label}
             className="text-muted-foreground hover:text-primary transition-colors"
           >
