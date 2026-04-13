@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Ambient background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/3 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
@@ -12,7 +11,6 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 pt-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -74,13 +72,16 @@ const HeroSection = () => {
               className="flex items-center gap-5 pt-4"
             >
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Mail, href: "#contact", label: "Email" },
+                { icon: Github, href: "https://github.com/anjalisunil23", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/anjali-sunil-a189a0218", label: "LinkedIn" },
+                { icon: Mail, href: "mailto:anjalisunil200@gmail.com", label: "Email" },
+                { icon: Phone, href: "tel:+916235743500", label: "Phone" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary transition-all duration-300"
                 >
@@ -90,7 +91,6 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Right - Avatar / visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -103,7 +103,6 @@ const HeroSection = () => {
                   <span className="font-heading text-6xl font-bold text-gradient">AS</span>
                 </div>
               </div>
-              {/* Floating decorations */}
               <div className="absolute -top-4 -right-4 w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 animate-float flex items-center justify-center text-primary text-xs font-heading font-bold">
                 {"</>"}
               </div>
@@ -114,7 +113,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

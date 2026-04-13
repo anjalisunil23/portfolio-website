@@ -4,19 +4,22 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    desc: "A full-featured online store with cart, checkout, and payment integration built with React and Node.js.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "Bizmapia",
+    desc: "A comprehensive local business directory and services platform with taxi booking, categorized listings for restaurants, hospitals, education, weddings, and more. Features a mobile app on Google Play.",
+    tags: ["React", "Full Stack", "Business Directory", "Mobile App"],
+    live: "https://www.bizmapia.com",
   },
   {
-    title: "Task Management App",
-    desc: "Collaborative project management tool with real-time updates, drag & drop, and team features.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "WebSockets"],
+    title: "Employee Panel",
+    desc: "An employee management panel built with React and Vite, featuring authentication, dashboard, and team management. Modern UI with role-based access control.",
+    tags: ["React", "Vite", "Authentication", "Dashboard"],
+    live: "https://employee-panel-react-vite2025.vercel.app",
   },
   {
-    title: "Portfolio Dashboard",
-    desc: "Interactive analytics dashboard with data visualization, charts, and responsive design.",
-    tags: ["React", "D3.js", "Tailwind", "REST API"],
+    title: "PetCare Tracker",
+    desc: "A pet care management application for tracking pet health, appointments, and daily care routines. Built to help pet owners stay organized.",
+    tags: ["React", "TypeScript", "Pet Management"],
+    github: "https://github.com/anjalisunil23/petcare-tracker",
   },
 ];
 
@@ -48,7 +51,6 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500 hover:glow-border flex flex-col"
             >
-              {/* Placeholder visual */}
               <div className="w-full h-40 rounded-xl bg-secondary mb-5 flex items-center justify-center overflow-hidden">
                 <span className="font-heading text-2xl font-bold text-muted-foreground/30 group-hover:text-primary/30 transition-colors">
                   {project.title.split(" ").map(w => w[0]).join("")}
@@ -67,12 +69,16 @@ const ProjectsSection = () => {
               </div>
 
               <div className="flex gap-3">
-                <a href="#" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary transition-all" aria-label="View code">
-                  <Github size={18} />
-                </a>
-                <a href="#" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary transition-all" aria-label="Live demo">
-                  <ExternalLink size={18} />
-                </a>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary transition-all" aria-label="View code">
+                    <Github size={18} />
+                  </a>
+                )}
+                {project.live && (
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary transition-all" aria-label="Live demo">
+                    <ExternalLink size={18} />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
