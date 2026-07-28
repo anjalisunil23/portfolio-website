@@ -4,15 +4,30 @@ import { useRef } from "react";
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS", "JavaScript"],
+    skills: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "Responsive Design"],
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "Python", "REST APIs", "GraphQL", "PostgreSQL"],
+    skills: ["Node.js", "Express.js", "PHP", "Python", "Django", "FastAPI", "REST APIs"],
   },
   {
-    title: "Tools & DevOps",
-    skills: ["Git", "Docker", "AWS", "CI/CD", "Figma", "VS Code"],
+    title: "Database",
+    skills: ["MongoDB", "MySQL", "PostgreSQL", "Firebase"],
+  },
+  {
+    title: "Cloud, Tools & Platforms",
+    skills: ["AWS", "Docker", "Git", "GitHub", "Firebase Auth", "VS Code"],
+  },
+  {
+    title: "Soft Skills",
+    skills: [
+      "Leadership",
+      "Team Collaboration",
+      "Communication",
+      "Time Management",
+      "Problem Solving",
+      "Project Management",
+    ],
   },
 ];
 
@@ -35,7 +50,7 @@ const SkillsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {skillCategories.map((cat, ci) => (
             <motion.div
               key={cat.title}

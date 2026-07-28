@@ -21,11 +21,19 @@ const experiences = [
   },
   {
     company: "We Promote Business Solution",
-    role: "Project Lead",
+    role: "Junior Software Developer",
     period: "2024 – 2025",
     description:
       "Led project teams and managed end-to-end delivery of client web applications. Coordinated between design, development, and QA to ensure timely releases and quality standards.",
     highlights: ["Team Leadership", "Project Management", "Client Communication", "Code Reviews"],
+  },
+  {
+    company: "Academic Enterprise Solutions, Amal Jyothi College of Engineering",
+    role: "Software Engineer Intern",
+    period: "2025 – Present",
+    description:
+      "Contributed to the development and deployment of placement software for Amal Jyothi College of Engineering, supporting institutional workflows, placement data management, and smooth rollout of web-based solutions.",
+    highlights: ["Placement Software", "Deployment", "Web Development", "Institutional Solutions"],
   },
 ];
 

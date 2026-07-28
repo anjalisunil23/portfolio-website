@@ -28,9 +28,9 @@ const AboutSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             I'm a passionate full stack web developer who loves turning ideas into
-            elegant, functional applications. With expertise across the entire
-            development stack, I build end-to-end solutions that are both beautiful
-            and robust.
+            elegant, functional applications. I have hands-on experience in the
+            development and deployment of placement software solutions and enjoy
+            building practical, scalable products for education and business needs.
           </p>
         </motion.div>
 

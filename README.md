@@ -2,6 +2,11 @@
 
 A modern personal portfolio website built for Anjali Sunil. The site showcases professional experience, projects, skills, social links, a downloadable resume, and multiple contact options.
 
+[![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
 ## Features
 
 - Clean one-page portfolio layout with smooth scroll navigation
@@ -10,6 +15,20 @@ A modern personal portfolio website built for Anjali Sunil. The site showcases p
 - Contact form with backend-free submission options
 - WhatsApp chat shortcut for quick communication
 - Responsive design for desktop and mobile
+
+## Live Demo
+
+Live site: [anjalisunil-portfolio-website.vercel.app](https://anjalisunil-portfolio-website.vercel.app)
+
+## Screenshots
+
+Add a few screenshots of the homepage, experience section, and contact section here once you export them.
+
+```text
+assets/screenshots/home.png
+assets/screenshots/experience.png
+assets/screenshots/contact.png
+```
 
 ## Tech Stack
 
@@ -124,8 +143,16 @@ This project can be deployed to any static hosting platform that supports Vite a
 
 Before deploying, make sure your environment variables are configured in the hosting provider and that `public/resume.pdf` exists if you want the download button to work.
 
+### Deploy to Vercel
 
-## Live Demo
+1. Push the repository to GitHub.
+2. Open Vercel and choose **Add New Project**.
+3. Import the GitHub repository.
+4. Keep the framework preset as **Vite**.
+5. Use the default build settings:
+  - Build command: `npm run build`
+  - Output directory: `dist`
+6. Add the required environment variables in Vercel.
+7. Deploy.
 
-Live site: [anjalisunil-portfolio-website.vercel.app](https://anjalisunil-portfolio-website.vercel.app)
-
+The included [vercel.json](vercel.json) handles the SPA rewrite so direct page refreshes work correctly.

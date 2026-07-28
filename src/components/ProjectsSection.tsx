@@ -21,6 +21,12 @@ const projects = [
     tags: ["React", "TypeScript", "Pet Management"],
     github: "https://github.com/anjalisunil23/petcare-tracker",
   },
+  {
+    title: "AJCE Placements",
+    desc: "A dynamic college placement portal developed and deployed for Amal Jyothi College of Engineering, featuring branch-wise placement data, recruiter insights, salary highlights, and placement news.",
+    tags: ["Web App", "Education", "Placement Dashboard", "Responsive"],
+    live: "https://placements.amaljyothi.ac.in/",
+  },
 ];
 
 const ProjectsSection = () => {
